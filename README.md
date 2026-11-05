@@ -24,29 +24,43 @@ Cisco Packet Tracer, VirtualBox, Ubuntu Server, Kali Linux, Samba, Nmap, UFW, fa
 ### 1. Network design ([details](01-network/README.md))
 Designed a 3-VLAN office network (Staff, Servers, Guest) in Packet Tracer with router-on-a-stick
 routing, DHCP, and an internal DNS server. A Guest ACL gives visitors internet access while blocking
-them from Staff and Server networks. I verified the design with 10 documented tests
+them from the Staff and Server networks. I verified the design with 10 documented tests
 ([results](01-network/test-results.md)).
 
 ### 2. IT support ([tickets](02-it-support/tickets.md) | [knowledge base](02-it-support/knowledge-base.md))
 Built an Ubuntu file server with users, groups, permissions, and Samba shares, where Staff and IT
-get different access. Reproduced and resolved **4 support tickets** (account reset, locked account,
+get different access. Reproduced and resolved **4 support tickets** (password reset, locked account,
 DNS fault, high CPU) and wrote **3 knowledge base articles**.
 
 ### 3. Security assessment and hardening ([report](03-security/hardening-report.md))
-Scanned my own server from Kali with Nmap, documented findings, then applied fixes and re-scanned
+Scanned my own server from Kali with Nmap, documented the findings, applied fixes, and re-scanned
 to verify them.
 
 | Metric | Before | After |
 |---|---|---|
-| Open TCP ports | **[number]** | **[number]** |
+| Open TCP ports | 3 | 2 |
 | SSH password login | Enabled | Disabled |
-| SSH root login | **[value]** | Disabled |
-| Host firewall | None | UFW (deny by default) |
-| Brute-force protection | None | fail2ban **[keep only if you captured a ban]** |
+| SSH root login | prohibit-password | Disabled |
+| Host firewall | None | UFW active (deny by default) |
+| Brute-force protection | None | fail2ban active |
+
+The remaining open ports are required services (SSH and Samba), restricted by the firewall to the lab subnet.
 
 ## Repository Structure
-01-network/ Packet Tracer file, configs, IP table, test results
-02-it-support/ Support tickets and knowledge base articles
-03-security/ Hardening report and Nmap scan output
-screenshots/ Evidence for every test and fix
+
+```
+01-network/       Packet Tracer file, configs, IP table, test results
+02-it-support/    Support tickets and knowledge base articles
+03-security/      Hardening report and Nmap scan output
+screenshots/      Evidence for every test and fix
 lessons-learned.md
+```
+
+## Lessons Learned
+
+Things broke along the way, and fixing them taught me the most. See
+[lessons-learned.md](lessons-learned.md) for the full write-up.
+
+## Disclaimer
+
+All scanning and testing was done on virtual machines I own, in an isolated lab network.
