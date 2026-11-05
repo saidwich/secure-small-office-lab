@@ -1,0 +1,11 @@
+# Nmap 7.98 scan initiated Thu Nov  5 15:03:01 2026 as: nmap -p 22 --script ssh-auth-methods -oN after-ssh-auth.txt 192.168.56.102
+Nmap scan report for srv1.local (192.168.56.102)
+Host is up (0.000037s latency).
+
+PORT   STATE SERVICE
+22/tcp open  ssh
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|_    publickey
+
+# Nmap done at Thu Nov  5 15:03:01 2026 -- 1 IP address (1 host up) scanned in 0.15 seconds
