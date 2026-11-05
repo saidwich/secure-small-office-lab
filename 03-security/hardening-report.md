@@ -38,4 +38,3 @@
 ## Limitations and Next Steps
 - Apache was staged to simulate a forgotten service; a fresh Ubuntu install has few exposed services.
 - The scan was against a single host on a host-only network.
-- Next: central logging and alerting with Wazuh (see below).
