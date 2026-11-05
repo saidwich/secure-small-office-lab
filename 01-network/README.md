@@ -9,7 +9,7 @@ Design a small office network for about 20 users that separates staff, servers, 
 
 ## Topology
 
-![Network diagram](../screenshots/network-diagram.png)
+![Network diagram](../screenshots/network-diagram.PNG)
 
 | Component | Role |
 |---|---|
