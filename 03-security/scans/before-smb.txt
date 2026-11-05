@@ -1,0 +1,13 @@
+# Nmap 7.98 scan initiated Thu Nov  5 14:07:07 2026 as: nmap -p 445 --script smb-security-mode,smb2-security-mode -oN before-smb.txt 192.168.56.102
+Nmap scan report for srv1.local (192.168.56.102)
+Host is up (0.000029s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+
+# Nmap done at Thu Nov  5 14:07:07 2026 -- 1 IP address (1 host up) scanned in 0.16 seconds
