@@ -25,9 +25,9 @@
 
 | Metric | Before | After |
 |---|---|---|
-| Open TCP ports | [your number] | [your number] |
+| Open TCP ports | 3 | 2 |
 | SSH password login | Enabled | Disabled |
-| SSH root login | [your value] | Disabled |
+| SSH root login | prohibited-password | Disabled |
 | Host firewall | None | UFW active |
 | Brute-force protection | None | fail2ban active |
 
