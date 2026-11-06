@@ -38,7 +38,7 @@ to verify them.
 
 | Metric | Before | After |
 |---|---|---|
-| Open TCP ports | 3 | 2 |
+| Open TCP ports | 4 | 3 |
 | SSH password login | Enabled | Disabled |
 | SSH root login | prohibit-password | Disabled |
 | Host firewall | None | UFW active (deny by default) |
